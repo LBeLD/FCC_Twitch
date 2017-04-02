@@ -13,14 +13,14 @@ $(document).ready(function() {
             url2 = 'https://api.twitch.tv/kraken/channels/' + name + '?client_id=eir670qpgheia6u9kzlbpjaj8067cm';
     //if not, 2nd ajax call to channels for more information
             $.getJSON(url2, function(data2) {
-              $('#resultList').append('<div class = "col-xs-offset-2 col-xs-2 colorOfline">' + '<img src='+ data2.logo + '></div>');
-              $('#resultList').append('<div class= "col-xs-2 colorOfline"><p><b>' + '<a href=' + data2.url +' target="_blank">' + data2.display_name +'</b></a></p></div>');
-              $('#resultList').append('<div class= "col-xs-4 colorOfline"><p><span><b> OFFLINE </b></span></p></div>');
+              $('#resultList').append('<div class = "col-xs-2 col-md-offset-2 col-md-2 colorOfline">' + '<img src='+ data2.logo + '></div>');
+              $('#resultList').append('<div class= "col-xs-5 col-md-2 colorOfline"><p><b>' + '<a href=' + data2.url +' target="_blank">' + data2.display_name +'</b></a></p></div>');
+              $('#resultList').append('<div class= "col-xs-5 col-md-4 colorOfline"><p><span><b> OFFLINE </b></span></p></div>');
             });
           } else {
-              $('#resultList').append('<div class = "col-xs-offset-2 col-xs-2 colorOnline">' + '<img src='+ data.stream.channel.logo + '></div>');
-              $('#resultList').append('<div class= "col-xs-2 colorOnline"><p><b>' + '<a href=' + data.stream.channel.url +' target="_blank">' + data.stream.channel.display_name +'</a></b></p></div>');
-              $('#resultList').append('<div class= "col-xs-4 colorOnline"><p><b>' + data.stream.game + '</b></p></div>');
+              $('#resultList').append('<div class = "col-xs-2 col-md-offset-2 col-md-2 colorOnline">' + '<img src='+ data.stream.channel.logo + '></div>');
+              $('#resultList').append('<div class= "col-xs-5 col-md-2 colorOnline"><p><b>' + '<a href=' + data.stream.channel.url +' target="_blank">' + data.stream.channel.display_name +'</a></b></p></div>');
+              $('#resultList').append('<div class= "col-xs-5 col-md-4 colorOnline"><p><b>' + data.stream.game + '</b></p></div>');
 
           }
       });
