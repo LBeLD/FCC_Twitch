@@ -69,7 +69,17 @@ h1 {
   color:#34712b;
 }
 
+#resultList {
+  overflow: hidden;
+}
+
 #resultList p {
   text-align: center;
   padding:20px;
 }
+
+@media (max-width: 700px) {
+  #resultList p {
+    font-size: 10px;
+    }
+  }
